@@ -38,8 +38,8 @@ def imprime_mensagem_abertura():
     print("Bem vindo ao jogo da forca!")
     print("*********************************")
 
-def carrega_palavra_secreta():
-    arquivo = open("palavras.txt", "r")
+def carrega_palavra_secreta(nome_arquivo):
+    arquivo = open(nome_arquivo, "r")
     palavras = []
 
     for linha in arquivo:
@@ -58,7 +58,6 @@ def pede_chute():
     chute = input("Qual letra?")
     chute = chute.strip().upper()
     return chute
-
 def marca_chute_correto(chute, letras_acertadas, palavra_secreta):
     index = 0
     for letra in palavra_secreta:
@@ -145,6 +144,7 @@ def imprime_mensagem_perdedor(palavra_secreta):
     print("   \_             _/       ")
     print("     \_         _/         ")
     print("       \_______/           ")
+
 
 if(__name__ == "__main__"):
     jogar()
