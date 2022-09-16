@@ -39,7 +39,7 @@ def imprime_mensagem_abertura():
     print("*********************************")
 
 def carrega_palavra_secreta(nome_arquivo):
-    arquivo = open(nome_arquivo, "r")
+    arquivo = open("palavras.txt", "r")
     palavras = []
 
     for linha in arquivo:
